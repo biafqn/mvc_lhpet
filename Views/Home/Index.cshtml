@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+ 
+    <h1>Lista de Clientes</h1>
+ 
+    @foreach (var item in @ViewBag.listaClientes) {
+<div><strong>ID:</strong> @item.Id</div>
+<div><strong>Nome:</strong> @item.Nome</div>
+<div><strong>CPF:</strong> @item.Cpf</div>
+<div><strong>Email:</strong> @item.Email</div>
+<div><strong>Paciente:</strong> @item.Paciente</div>
+<hr />
+    }
+ 
+    <h1>Lista de Fornecedores</h1>
+ 
+    @foreach (var item in @ViewBag.listaFornecedores) {
+<div><strong>ID:</strong> @item.Id</div>
+<div><strong>Nome:</strong> @item.Nome</div>
+<div><strong>CNPJ:</strong> @item.Cnpj</div>
+<div><strong>Email:</strong> @item.Email</div>
+<hr />
+    }
+</div>
